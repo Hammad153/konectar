@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konectar Landing Page</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <div class="container">
+  <h1 class="wait-heading">Konectar</h1>
+  <p>Join our waitlist to be the first to know!</p>
+  <div class="form waitlist-form">
+  <form action="/waitlist" method="POST">
+    <input type="text" name="fullName" placeholder="Full Name" required><br>
+    <input type="text" name="farmName" placeholder="Farm Name" required><br>
+    <input type="text" name="farmLocation" placeholder="Farm Location" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <input type="tel" name="phone" placeholder="Your Phone Number"><br>
+    <input type="text" name="farmSize" placeholder="Farm Size"><br>
+  </div>
+
+    <!-- Produce Types -->
+  <div class="protypes">
+    <label for="produceTypes">Types of Produce:</label><br>
+    <input type="checkbox" name="produceTypes" value="Option1"> Grains<br>
+    <input type="checkbox" name="produceTypes" value="Option2"> Vegetables<br>
+    <input type="checkbox" name="produceTypes" value="Option3"> Legumes<br>
+    <input type="checkbox" name="produceTypes" value="Option3"> Fruits<br>
+    <input type="checkbox" name="produceTypes" value="Option3"> others<br>
+  </div>
+
+   <div class="challenge-info">
+    <input type="text" name="supplyFrequency" placeholder="Supply Frequency" class="suppfre"><br>
+    <textarea name="mainChallenges" placeholder="Main Challenges" class="challenge"></textarea><br>
+    <input type="checkbox" name="receiveUpdates" value="true"> Receive Updates<br>
+  </div>
+
+    <button type="submit" >Join Wait List</button>
+  </form>
+
+  <button id="join-whatsapp">Join Our Farmer's WhatsApp Community</button>
+</div>
+  <script>
+    const joinWhatsappButton = document.getElementById('join-whatsapp');
+    joinWhatsappButton.addEventListener('click', () => {
+      window.open('https://chat.whatsapp.com/GaTyitdKOvgBCu7W2ANMWY', '_blank');
+    });
+  </script>
+</body>
+</html>
